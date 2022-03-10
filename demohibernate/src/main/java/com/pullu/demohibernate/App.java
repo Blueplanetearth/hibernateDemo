@@ -26,6 +26,8 @@ public class App
         
         
         Configuration con =  new Configuration().configure().addAnnotatedClass(Human.class);
+        
+        //New changes
             
         SessionFactory sf = con.buildSessionFactory();
         
