@@ -18,11 +18,17 @@ public class App
         System.out.println( "Hello World!" );
         
         
+        HumanName hm = new HumanName();
+        
+        hm.setFname("Pulkit");
+        hm.setLname("Jain");
+        hm.setMname("");
+        
         Human human = new Human();
         
-        human.setId(2);
-        human.setName("pj");
-        human.setColor("Blue");
+        human.setId(4);
+        human.setName(hm);
+        human.setColor("yellow");
         
         
         Configuration con =  new Configuration().configure().addAnnotatedClass(Human.class);
