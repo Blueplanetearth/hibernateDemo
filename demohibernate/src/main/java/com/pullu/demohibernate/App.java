@@ -38,8 +38,7 @@ public class App
         student.setRollno(1);
         student.setName("Pulkit");
         student.setMarks(70);
-        student.setLaptop(laptop);
-        
+        student.getLaptop().add(laptop);
         
         
         //Configuration con =  new Configuration().configure().addAnnotatedClass(Human.class);
