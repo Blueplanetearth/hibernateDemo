@@ -30,18 +30,33 @@ public class App
         human.setName(hm);
         human.setColor("yellow");
         
+        Laptop laptop = new Laptop();
+        laptop.setLid(101);
+        laptop.setLname("Dell");
         
-        Configuration con =  new Configuration().configure().addAnnotatedClass(Human.class);
+        Student student = new Student();
+        student.setRollno(1);
+        student.setName("Pulkit");
+        student.setMarks(70);
+        student.setLaptop(laptop);
+        
+        
+        
+        //Configuration con =  new Configuration().configure().addAnnotatedClass(Human.class);
         
         //New changes
-            
+        Configuration con =  new Configuration().configure().addAnnotatedClass(Laptop.class).addAnnotatedClass(Student.class);
+        
         SessionFactory sf = con.buildSessionFactory();
         
         Session session = sf.openSession();
         
         Transaction tx = session.beginTransaction();
         
-        session.save(human);
+        //session.save(human);
+        session.save(laptop);
+        session.save(student);
+        
         
         tx.commit();
         
