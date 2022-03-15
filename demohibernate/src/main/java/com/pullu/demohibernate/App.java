@@ -20,25 +20,36 @@ public class App
         
         HumanName hm = new HumanName();
         
-        hm.setFname("Pulkit");
-        hm.setLname("Jain");
-        hm.setMname("");
+//        hm.setFname("Pulkit");
+//        hm.setLname("Jain");
+//        hm.setMname("");
+//        
+//        Human human = new Human();
+//        
+//        human.setId(4);
+//        human.setName(hm);
+//        human.setColor("yellow");
         
-        Human human = new Human();
-        
-        human.setId(4);
-        human.setName(hm);
-        human.setColor("yellow");
+
         
         Laptop laptop = new Laptop();
         laptop.setLid(101);
         laptop.setLname("Dell");
         
+        
+        Laptop lap = new Laptop();
+        lap.setLid(102);
+        lap.setLname("HP");
+        
         Student student = new Student();
         student.setRollno(1);
         student.setName("Pulkit");
         student.setMarks(70);
-        student.getLaptop().add(laptop);
+//        student.getLaptop().add(laptop);
+//        student.getLaptop().add(lap);
+        
+        laptop.setStd(student);
+        lap.setStd(student);
         
         
         //Configuration con =  new Configuration().configure().addAnnotatedClass(Human.class);
@@ -54,6 +65,7 @@ public class App
         
         //session.save(human);
         session.save(laptop);
+        session.save(lap);
         session.save(student);
         
         
